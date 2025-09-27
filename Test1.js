@@ -1,3 +1,6 @@
+//admin set
+const adminID = 00000;
+
 const TELEGRAM_TOKEN = "7649232976:AAGqc7Uqzi9Y1bvOl121Dt1Y11SE2Iv_9Aw";
 const SHEET_ID = "1XJTmtb3bmePZTMtt8jZSKL5stQXgbPbtDwVOpnZClQU";
 const SHEET_USERS = "List2";
@@ -23,18 +26,32 @@ function doPost(e) {
 
   let lang = PropertiesService.getUserProperties().getProperty("lang_" + userId);
 
-  if (text === "/start") {
+  if (text === "/start" && userId === adminID) {
     if (!isUserExist(userSheet, userId)) {
       userSheet.appendRow([userId, new Date(), username, firstName]);
     }
 
-    sendMessage(userId, `Assalomu Alaykum hurmatli ${firstName} kanal yordamchi botiga xush kelibsiz!`, {
-      keyboard: [["Kanal qoʻshish"], ["Post yuborish"]],
+    sendMessage(userId, `Assalomu Alaykum hurmatli admin botingizga xush kelibsiz!`, {
+      keyboard: [
+                    ["Kanal qoʻshish", "Post yuborish"],
+                    ["💃 Boshqarish"]
+                ],
       one_time_keyboard: true,
       resize_keyboard: false
     });
     return;
   }
+
+  if (text === "/start" && userId !== adminID) {
+    if (!isUserExist(userSheet, userId)) {
+      userSheet.appendRow([userId, new Date(), username, firstName]);
+    }
+
+    sendMessage(userId, `Assalomu Alaykum hurmatli ${firstName} botimizga xush kelibsiz!
+    Marhamat kino kodini yuboring!`);
+    return;
+  }
+  
   if (text !== "/start"){
     bot("sendMessage", userId, "Assalomu Alaykum")
     if (text === "Kanal qoʻshish"){

@@ -20,7 +20,7 @@ let sana = yil + "-" + format(oy) + "-" + format(kun);
 //admin set
 const adminID = 00000;
 
-const TELEGRAM_TOKEN = "7649232976:AAGqc7Uqzi9Y1bvOl121Dt1Y11SE2Iv_9Aw";
+const TELEGRAM_TOKEN = "8227708263:AAGBwiqfpKMUyy9Qfh0BV9YURwCfJRUL4iA";
 const SHEET_ID = "1XJTmtb3bmePZTMtt8jZSKL5stQXgbPbtDwVOpnZClQU";
 const SHEET_USERS = "List2";
 const SHEET_APPLICATIONS = "List1";

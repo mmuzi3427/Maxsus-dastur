@@ -11,7 +11,7 @@ let sekund = now.getSeconds();
 
 // 01 formatda chiqishi uchun (masalan 07, 09)
 function format(n) {
-  return n < 10 ? "0" + n : n;
+    return n < 10 ? "0" + n : n;
 }
 
 let vaqt = format(soat) + ":" + format(daqiqa) + ":" + format(sekund);

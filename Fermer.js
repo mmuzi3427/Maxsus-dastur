@@ -52,7 +52,7 @@ function doPost(e) {
 
     sendMessage(userId, `Assalomu Alaykum hurmatli admin botingizga xush kelibsiz!`, {
       keyboard: [
-                    ["", ""],
+                    ["🛒", "👤", "🌱", "👥", "🚗"],
                     ["💃 Boshqarish"]
                 ],
       one_time_keyboard: true,
@@ -66,8 +66,14 @@ function doPost(e) {
       userSheet.appendRow([userId, new Date(), username, firstName]);
     }
 
-    sendMessage(userId, `Assalomu Alaykum hurmatli ${firstName} botimizga xush kelibsiz!
-    Marhamat kino kodini yuboring!`);
+    sendMessage(userId, `Assalomu Alaykum hurmatli ${firstName} ferma botga xush kelibsiz!
+    Bu bot orqali mahsulot yetishtirib sotishingiz mumkin!`, {
+      keyboard: [
+        ["🛒", "👤", "🌱", "👥", "🚗"],
+      ],
+      one_time_keyboard: true,
+      resize_keyboard: false
+    });
     return;
   }
   

@@ -21,8 +21,8 @@ let sana = yil + "-" + format(oy) + "-" + format(kun);
 const adminID = 00000;
 
 const TELEGRAM_TOKEN = "8227708263:AAGBwiqfpKMUyy9Qfh0BV9YURwCfJRUL4iA";
-const SHEET_ID = "1XJTmtb3bmePZTMtt8jZSKL5stQXgbPbtDwVOpnZClQU";
-const SHEET_USERS = "List2";
+const SHEET_ID = "1AJmo9POwDyC9iNgF6TXRX0TP4mq0qpyVhRvElkubJXs/edit";
+const SHEET_USERS = "userInfo";
 const SHEET_APPLICATIONS = "List1";
 
 function doPost(e) {
